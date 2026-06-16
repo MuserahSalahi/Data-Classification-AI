@@ -91,7 +91,6 @@ with col2:
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
                 xticklabels=iris_data.target_names, yticklabels=iris_data.target_names, ax=ax)
     
-    # Live/Current Prediction ka index nikalna (0, 1, ya 2)
     predicted_index = prediction[0]
     
     # ----------------------------------------------------
@@ -99,7 +98,6 @@ with col2:
     # ----------------------------------------------------
     import matplotlib.patches as patches
     # Rectangle(x_start, y_start, width, height)
-    # y-axis up-down hoti hai, isliye predicted_index ke mutabik box shift hoga
     rect = patches.Rectangle((0, predicted_index), 3, 1, linewidth=3, edgecolor='red', facecolor='none')
     ax.add_patch(rect)
     
@@ -117,7 +115,6 @@ with col2:
     ax.set_xlabel("Predicted Species", fontsize=9)
     ax.set_ylabel("Actual Species", fontsize=9)
     
-    # Dashboard par plot dikhana
     st.pyplot(fig)
 
 st.divider()
