@@ -114,7 +114,7 @@ with col2:
             label.set_fontsize(12)       # Bada size
             
     # X-axis ke labels ko clear aur neat rakhne ke liye
-    ax.set_title("Confusion Matrix (Dynamic Tracking Active)", fontsize=11)
+    ax.set_title("Confusion Matrix", fontsize=11)
     ax.set_xlabel("Predicted Species", fontsize=9)
     ax.set_ylabel("Actual Species", fontsize=9)
     
