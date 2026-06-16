@@ -9,7 +9,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix
 
-# Page configuration - Professional Layout
 st.set_page_config(page_title="AI Data Classification Dashboard", layout="wide")
 
 # ==========================================
@@ -60,7 +59,6 @@ col1, col2 = st.columns([1, 2])
 with col1:
     st.subheader(" Model Inference")
     
-    # User inputs ko array mein convert karke scale karna
     user_input = np.array([[sepal_l, sepal_w, petal_l, petal_w]])
     user_input_scaled = scaler.transform(user_input)
     
@@ -110,7 +108,6 @@ with col2:
             label.set_weight('bold')     # Mota/Bold text
             label.set_fontsize(12)       # Bada size
             
-    # X-axis ke labels ko clear aur neat rakhne ke liye
     ax.set_title("Confusion Matrix", fontsize=11)
     ax.set_xlabel("Predicted Species", fontsize=9)
     ax.set_ylabel("Actual Species", fontsize=9)
