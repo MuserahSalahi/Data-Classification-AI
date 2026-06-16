@@ -80,14 +80,14 @@ with col1:
 with col2:
     st.subheader(" Model Evaluation & Logic Boundaries")
     
-    # Test set par predictions aur confusion matrix nikalna
+    # Figure out predictions and confusion matrix on test set 
     y_pred = knn_model.predict(X_test_scaled)
     cm = confusion_matrix(y_test, y_pred)
     
     # Figure setup
     fig, ax = plt.subplots(figsize=(5, 3.5))
     
-    # Heatmap generate karna
+    # Generate Heatmap  
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', 
                 xticklabels=iris_data.target_names, yticklabels=iris_data.target_names, ax=ax)
     
@@ -106,7 +106,6 @@ with col2:
     # ----------------------------------------------------
     #  2: Dynamic Text Labels (Red & Bold)
     # ----------------------------------------------------
-    # Sirf predicted flower wale label ka font change karna
     for i, label in enumerate(ax.get_yticklabels()):
         if i == predicted_index:
             label.set_color('red')       # Surkh rang
